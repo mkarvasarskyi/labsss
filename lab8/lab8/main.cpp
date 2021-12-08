@@ -5,48 +5,38 @@
 //  Created by Mischa Karvasarskyi on 01.12.21.
 //
 
-#include <stdio.h>
-#include <time.h>
-#include <cstdlib>
-#include <ctime>
-#include <locale.h>
-int Ar[100];   // массив, который обрабатывается
+#include <iostream>
+using namespace std;
 
-int main(void) {
-    setlocale(LC_ALL, "Rus");
-    int i, j;    // индексы в массиве
-    int av;      // среднее значение
-    int nn; // количество элементов в последовательности
-    int ib;      // индекс начала последовательности
+int main()
+{
+  const int MyArrayLength = 100;
+  int SummOfMyArray = 0;
+  int per = 0;
+  int MyArray[MyArrayLength];
 
-    rand();
-    for (i = 0; i < 100; Ar[i++] = rand() - 100);
-    printf("Начальный массив:\n");
-    for (i = 0; i < 100; printf("%3d  ", Ar[i++]));
-    putchar('\n');
-    putchar('\n');
-    for (nn = i = 0; i < 100; i++) {
-        if (Ar[i] < 0)
-            if (!nn) {
-                ib = i; av = Ar[i]; nn = 1;
-            }
-            else {
-                av += Ar[i]; nn++;
-            }
-        else
-            if (nn) {
-                
-                av /= nn;
-                for (j = ib; j < i; j++)
-                    if (Ar[j] > av) Ar[j] = av;
-                nn = 0;
-            }
+  cout << "Рандомно сгенерированный массив на " << MyArrayLength << " элементов" << endl;
+  for (int i = 0; i < MyArrayLength; i++)
+  {
+    MyArray[i] = 0 + rand() % 200-100;
+    cout << MyArray[i] << "\t";
+  }
+  cout << endl << endl;
+  for (int i = 0; i < MyArrayLength; i++)
+  {
+    if (MyArray[i] > 0) {
+      SummOfMyArray += MyArray[i];
+      per++;
     }
-    if (nn)
-        for (av /= nn, j = ib; j < i; j++)
-            if (Ar[j] > av) Ar[j] = av;
-    printf("Массив-результат:\n");
-    for (i = 0; i < 100; printf("%3d  ", Ar[i++]));
-    putchar('\n');
-    return 0;
+  }
+  int result = SummOfMyArray / per;
+  cout << "Cреднее арифметическое всех положительных элементов массива = " << result <<endl;
+  cout << "Все отрицательные элементы массива заменены на среднее арифметическое всех положительных элементов массива:" << endl << endl;
+  for (int i = 0; i < MyArrayLength; i++)
+  {
+    if (MyArray[i] < 0) {
+      MyArray[i] = result;
+    }
+    cout << MyArray[i] << "\t";
+  }
 }
