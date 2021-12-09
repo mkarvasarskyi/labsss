@@ -2,7 +2,7 @@
 //  main.cpp
 //  lab10
 //
-//  Created by Mischa Karvasarskyi on 03.12.21.
+//  Created by Mischa Karvasarskyi on 09.12.21.
 //
 
 #include <iostream>
