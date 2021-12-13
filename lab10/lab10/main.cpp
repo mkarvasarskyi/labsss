@@ -7,7 +7,7 @@
 
 #include <iostream>
 using namespace std;
-int* ConvertMyArrayToMatrix(int* MyArray) {
+void ConvertMyArrayToMatrix(int* MyArray) {
     const int M = 3;
     const int N = 3;
     int temp = 0;
@@ -47,7 +47,7 @@ int* ConvertMyArrayToMatrix(int* MyArray) {
             temp++;
         }
     }
-    return MyArray;
+//  return MyArray;
 }
 
 
