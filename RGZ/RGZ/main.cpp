@@ -13,7 +13,7 @@
 #include <iomanip>
 using namespace std::chrono;
 
-std::ofstream F;
+std::ofstream F; //название файла в коде
 std::chrono::time_point<std::chrono::steady_clock> start, end;
 
     int* OrderedArray(int* MyArray, int Size) {
@@ -51,7 +51,7 @@ void Swap(int* MyArray, int i)
 }
 
 
-    int* ShakerSort(int* MyArray, int Start, int Size)
+   int* ShakerSort(int* MyArray, int Start, int Size) //шейкерная сортировка
     {
         auto start = std::chrono::high_resolution_clock::now();
         int Left, Right, i, j=0, t = -1;
@@ -124,7 +124,7 @@ void Swap(int* MyArray, int i)
             FindArray(MyArray, Start, j);
         return MyArray;
     }
-    int* Quicksort(int* MyArray, int Start, int Size) {
+    int* Quicksort(int* MyArray, int Start, int Size) { //Сортировка Хоара
         auto start = std::chrono::high_resolution_clock::now();
         FindArray(MyArray, Start, Size);
         auto end = std::chrono::high_resolution_clock::now();
@@ -145,17 +145,16 @@ void Swap(int* MyArray, int i)
 
 int main()
 {
-    F.open("info.txt", std::ios_base::trunc);
+    F.open("info.txt", std::ios_base::trunc); //очистить файл, если там чтo-то есть
     F.close();
-    setlocale(LC_ALL, "Rus");
     const int Size = 45;
     const int sizes = 9;
     int Start = 0;
     int* MyArray = new int[Size];
-    int MyOrderedArrays[sizes][Size];
-    int MyUnorderedArrays[sizes][Size];
-    int MyReverseOrderedArrays[sizes][Size];
-    F.open("info.txt", std::ios_base::app);
+    int MyOrderedArrays[sizes][Size]; //упорядочный массив
+    int MyUnorderedArrays[sizes][Size]; //не упорядоченный массив
+    int MyReverseOrderedArrays[sizes][Size]; //массив упорядоченный в обратном порядке
+    F.open("info.txt", std::ios_base::app); //открытие файла для записи в конец файла
     F << "\nQuickSort Ordered Arrays\n\n" ;
     F.close();
     std::cout << "QuickSort Ordered Arrays\n\n";
@@ -165,17 +164,17 @@ int main()
         OrderedArray(MyOrderedArrays[i], arrsize);
         Quicksort(MyOrderedArrays[i], Start, arrsize);
     }
-    F.open("info.txt", std::ios_base::app);
+    F.open("info.txt", std::ios_base::app); //открытие файла для записи в конец файла
     F << "\nQuickSort Unordered Arrays\n" << std::endl;
     F.close();
     std::cout << "QuickSort Unordered Arrays\n\n";
     for (size_t i = 0; i < sizes; i++)
     {
-        int arrsize = (i + 1) * 5;
-        UnorderedArray(MyUnorderedArrays[i], arrsize);
-        Quicksort(MyUnorderedArrays[i], Start, arrsize);
+        int arrsize = (i + 1) * 5; //Размер
+        UnorderedArray(MyUnorderedArrays[i], arrsize); //не упорядоченный массив
+        Quicksort(MyUnorderedArrays[i], Start, arrsize); //сортировка Хоара
     }
-    F.open("info.txt", std::ios_base::app);
+    F.open("info.txt", std::ios_base::app); //открытие файла для записи в конец файла
     F << "\nQuickSort ReverseOrdered Arrays\n" << std::endl;
     F.close();
     std::cout << "QuickSort ReverseOrdered Arrays\n\n";
@@ -185,7 +184,7 @@ int main()
         ReverseOrderedArray(MyReverseOrderedArrays[i], arrsize);
         Quicksort(MyReverseOrderedArrays[i], Start, arrsize);
     }
-    F.open("info.txt", std::ios_base::app);
+    F.open("info.txt", std::ios_base::app); //открытие файла для записи в конец файла
     F << "\nShakerSort Ordered Arrays\n\n";
     F.close();
     std::cout << "ShakerSort Ordered Arrays\n\n";
@@ -195,7 +194,7 @@ int main()
         OrderedArray(MyOrderedArrays[i], arrsize);
         ShakerSort(MyOrderedArrays[i], Start, arrsize);
     }
-    F.open("info.txt", std::ios_base::app);
+    F.open("info.txt", std::ios_base::app); //открытие файла для записи в конец файла
     F << "\nShakerSort Unordered Arrays\n" << std::endl;
     F.close();
     std::cout << "ShakerSort Unordered Arrays\n\n";
@@ -205,15 +204,15 @@ int main()
         UnorderedArray(MyUnorderedArrays[i], arrsize);
         ShakerSort(MyUnorderedArrays[i], Start, arrsize);
     }
-    F.open("info.txt", std::ios_base::app);
+    F.open("info.txt", std::ios_base::app); //открытие файла для записи в конец файла
     F << "\nShakerSort ReverseOrdered Arrays\n" << std::endl;
     F.close();
     std::cout << "ShakerSort ReverseOrdered Arrays\n\n";
     for (size_t i = 0; i < sizes; i++)
     {
         int arrsize = (i + 1) * 5;
-        ReverseOrderedArray(MyReverseOrderedArrays[i], arrsize);
-        ShakerSort(MyReverseOrderedArrays[i], Start, arrsize);
+        ReverseOrderedArray(MyReverseOrderedArrays[i], arrsize); //методы, первый параметр - создает массив, второй сортирует его
+        ShakerSort(MyReverseOrderedArrays[i], Start, arrsize); //методы, первый параметр - создает массив, второй сортирует его
     }
 }
 

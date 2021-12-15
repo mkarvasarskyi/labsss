@@ -1,0 +1,72 @@
+
+QuickSort Ordered Arrays
+
+QuickSort 5: 	0.000001 s
+QuickSort 10: 	0.000002 s
+QuickSort 15: 	0.000001 s
+QuickSort 20: 	0.000002 s
+QuickSort 25: 	0.000002 s
+QuickSort 30: 	0.000002 s
+QuickSort 35: 	0.000002 s
+QuickSort 40: 	0.000002 s
+QuickSort 45: 	0.000003 s
+
+QuickSort Unordered Arrays
+
+QuickSort 5: 	0.000001 s
+QuickSort 10: 	0.000001 s
+QuickSort 15: 	0.000002 s
+QuickSort 20: 	0.000003 s
+QuickSort 25: 	0.000003 s
+QuickSort 30: 	0.000003 s
+QuickSort 35: 	0.000004 s
+QuickSort 40: 	0.000004 s
+QuickSort 45: 	0.000006 s
+
+QuickSort ReverseOrdered Arrays
+
+QuickSort 5: 	0.000001 s
+QuickSort 10: 	0.000001 s
+QuickSort 15: 	0.000001 s
+QuickSort 20: 	0.000002 s
+QuickSort 25: 	0.000003 s
+QuickSort 30: 	0.000002 s
+QuickSort 35: 	0.000003 s
+QuickSort 40: 	0.000002 s
+QuickSort 45: 	0.000002 s
+
+ShakerSort Ordered Arrays
+
+ShakerSort 5: 	0.004001  
+ShakerSort 10: 	0.004756  
+ShakerSort 15: 	0.003439  
+ShakerSort 20: 	0.004080  
+ShakerSort 25: 	0.007451  
+ShakerSort 30: 	0.005021  
+ShakerSort 35: 	0.008711  
+ShakerSort 40: 	0.006759  
+ShakerSort 45: 	0.008066  
+
+ShakerSort Unordered Arrays
+
+ShakerSort 5: 	0.002460  
+ShakerSort 10: 	0.006549  
+ShakerSort 15: 	0.006729  
+ShakerSort 20: 	0.005464  
+ShakerSort 25: 	0.006388  
+ShakerSort 30: 	0.005559  
+ShakerSort 35: 	0.008011  
+ShakerSort 40: 	0.006039  
+ShakerSort 45: 	0.008796  
+
+ShakerSort ReverseOrdered Arrays
+
+ShakerSort 5: 	0.005703  
+ShakerSort 10: 	0.004256  
+ShakerSort 15: 	0.004977  
+ShakerSort 20: 	0.009864  
+ShakerSort 25: 	0.006621  
+ShakerSort 30: 	0.008480  
+ShakerSort 35: 	0.006322  
+ShakerSort 40: 	0.008776  
+ShakerSort 45: 	0.010354  
