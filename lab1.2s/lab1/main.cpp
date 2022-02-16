@@ -42,8 +42,8 @@ void random(Details det[]) {
  
         det[i].year = name_rand[rand() % 3];
         det[i].type = letters[rand() % 3];
-        det[i].diametr = rand() %97 ;
-        det[i].chastota = rand() %97 * 67;
+        det[i].diametr = rand() %300 ;
+        det[i].chastota = rand() %2000 * 67;
  
     }
 }
@@ -81,7 +81,7 @@ void print(Details det[]) {
              cout << "|";
              cout.width(12);
              cout << det[i].year;
-             printf("|   %c            |  %-9.1d      | %14lg  |\n",
+             printf("|   %c           |  %-9.1d      | %14lg  |\n",
                      det[i].type, det[i].diametr, det[i].chastota);
          }
         printf("|----------------------------------------------------------------|\n");
