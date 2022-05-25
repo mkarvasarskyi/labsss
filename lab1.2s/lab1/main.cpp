@@ -11,8 +11,8 @@ using namespace std;
  
 #define amount_of_elements 3
 struct Details {
- 
- 
+
+    
     string year;
     char type;
     int diametr;
@@ -23,7 +23,7 @@ struct Details {
  
 void in_put(Details det[]) {
  
- 
+    
     for (int i = 0; i < amount_of_elements; ++i) {
  
         cout << i + 1 << "Введите: год , руководителя , диаметр , частоту: ";
@@ -125,8 +125,6 @@ int main() {
         }
  
     }
- 
- 
  
     return 0;
 }
